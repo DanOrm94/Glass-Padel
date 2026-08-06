@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Glass Padel UK</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glass Padel UK</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 font-sans text-gray-800">
-    <!-- Navbar (same as index) -->
-    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-blue-600">Glass Padel UK</a>
-            <ul class="flex space-x-6 text-sm md:text-base font-semibold">
-                <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
-                <li><a href="about.html" class="hover:text-blue-500">About</a></li>
-                <li><a href="facilities.html" class="hover:text-blue-500">Facilities</a></li>
-                <li><a href="contact.html" class="text-blue-600">Contact</a></li>
-                <li><a href="book.html" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700">Book Now</a></li>
-            </ul>
-        </div>
-    </nav>
+<body class="min-h-screen text-slate-100">
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 border-b border-slate-700/60">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="inline-flex h-9 w-9 rounded-xl bg-slate-900/70 border border-sky-400/50 shadow-lg shadow-sky-900/40 items-center justify-center">
+          <span class="h-6 w-6 rounded-full border border-sky-400/70 bg-slate-950/70 shadow-inner"></span>
+        </span>
+        <span class="text-lg md:text-xl font-semibold tracking-wide">Glass Padel UK</span>
+      </a>
+      <ul class="hidden md:flex space-x-6 text-sm md:text-base font-medium text-slate-100">
+        <li><a href="index.html" class="hover:text-sky-300 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-sky-300 transition">About</a></li>
+        <li><a href="facilities.html" class="hover:text-sky-300 transition">Facilities</a></li>
+        <li><a href="contact.html" class="hover:text-sky-300 transition">Contact</a></li>
+        <li><a href="book.html" class="inline-flex items-center rounded-full bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold px-5 py-2 shadow-md shadow-sky-900/40 transition">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Content -->
-    <main class="container mx-auto mt-12 p-6 max-w-4xl bg-white shadow-lg rounded-lg">
-        <h2 class="text-3xl font-bold mb-6 text-blue-600">Contact Information</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-                <h3 class="text-xl font-semibold mb-2">Location</h3>
-                <p class="text-gray-700 mb-4">Unit 1, Stalybridge Industrial Park<br>7 Stanley St<br>Stalybridge SK15 1SS</p>
-                
-                <h3 class="text-xl font-semibold mb-2">Get in Touch</h3>
-                <p class="text-gray-700"><strong>Phone:</strong> <a href="tel:07904751051" class="text-blue-600 hover:underline">07904 751051</a></p>
-                <p class="text-gray-700"><strong>Email:</strong> <a href="mailto:info@glasspadelclub.co.uk" class="text-blue-600 hover:underline">info@glasspadelclub.co.uk</a></p>
-            </div>
-            
-            <div>
-                <h3 class="text-xl font-semibold mb-2">Opening Hours</h3>
-                <ul class="space-y-1 text-gray-700">
-                    <li>Open Daily: 06:00 - 00:00 (Midnight)</li>
-                </ul>
-                <div class="mt-6">
-                    <a href="https://www.instagram.com/glasspadeluk?igsh=bTd1dGR4dTczYXYz" target="_blank" class="text-blue-500 font-semibold hover:underline">Follow us on Instagram</a>
-                </div>
-            </div>
-        </div>
-    </main>
+  <main class="pt-24 pb-16">
+    <section class="max-w-6xl mx-auto px-4">
+      <div class="glass-card rounded-3xl p-8 md:p-10">
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tight mb-4">Contact & Find Us</h1>
+        <p class="text-sm md:text-base text-slate-300/90 mb-4">
+          Unit 1, Stalybridge Industrial Park, 7 Stanley St, Stalybridge SK15 1SS.<br>
+          Phone: 07904 751051<br>
+          Email: info@glasspadelclub.co.uk<br>
+          We are open daily, with courts bookable until 12am.
+        </p>
+      </div>
+    </section>
+  </main>
 
-    <footer class="bg-gray-800 text-white text-center p-6 mt-12">
-        <p>&copy; 2026 Glass Padel UK. All rights reserved.</p>
-    </footer>
+  <footer class="border-t border-slate-800 bg-slate-950/80">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm text-slate-400">
+      <p>&copy; 2026 Glass Padel UK. All rights reserved.</p>
+      <p>Unit 1, Stalybridge Industrial Park, 7 Stanley St, Stalybridge SK15 1SS</p>
+    </div>
+  </footer>
 </body>
 </html>
