@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Glass Padel UK</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glass Padel UK</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 font-sans text-gray-800">
-    <!-- Navbar (same as index) -->
-    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-blue-600">Glass Padel UK</a>
-            <ul class="flex space-x-6 text-sm md:text-base font-semibold">
-                <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
-                <li><a href="about.html" class="text-blue-600">About</a></li>
-                <li><a href="facilities.html" class="hover:text-blue-500">Facilities</a></li>
-                <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
-                <li><a href="book.html" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700">Book Now</a></li>
-            </ul>
-        </div>
-    </nav>
+<body class="min-h-screen text-slate-100">
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 border-b border-slate-700/60">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="inline-flex h-9 w-9 rounded-xl bg-slate-900/70 border border-sky-400/50 shadow-lg shadow-sky-900/40 items-center justify-center">
+          <span class="h-6 w-6 rounded-full border border-sky-400/70 bg-slate-950/70 shadow-inner"></span>
+        </span>
+        <span class="text-lg md:text-xl font-semibold tracking-wide">Glass Padel UK</span>
+      </a>
+      <ul class="hidden md:flex space-x-6 text-sm md:text-base font-medium text-slate-100">
+        <li><a href="index.html" class="hover:text-sky-300 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-sky-300 transition">About</a></li>
+        <li><a href="facilities.html" class="hover:text-sky-300 transition">Facilities</a></li>
+        <li><a href="contact.html" class="hover:text-sky-300 transition">Contact</a></li>
+        <li><a href="book.html" class="inline-flex items-center rounded-full bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold px-5 py-2 shadow-md shadow-sky-900/40 transition">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Content -->
-    <main class="container mx-auto mt-12 p-6 max-w-4xl bg-white shadow-lg rounded-lg">
-        <h2 class="text-3xl font-bold mb-6 text-blue-600">About Glass Padel</h2>
-        <p class="mb-4 text-lg leading-relaxed">
-            Glass Padel is a modern padel facility based in Stalybridge, offering high-quality courts for players of all abilities. Whether you’re completely new to padel or an experienced player looking for competitive games, our premium glass courts provide the perfect setting to enjoy one of the world’s fastest-growing sports.
+  <main class="pt-24 pb-16">
+    <section class="max-w-6xl mx-auto px-4">
+      <div class="glass-card rounded-3xl p-8 md:p-10">
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tight mb-4">About Glass Padel</h1>
+        <p class="text-sm md:text-base text-slate-300/90 mb-4">
+          Glass Padel is a modern padel facility based in Stalybridge, offering high-quality indoor
+          glass courts for players of all abilities. We focus on creating a welcoming, social
+          environment where friends, families, and local players can stay active, have fun, and be
+          part of a growing padel community.
         </p>
-        <p class="mb-4 text-lg leading-relaxed">
-            We focus on creating a welcoming, social environment where friends, families, and local players can stay active, have fun, and be part of a growing padel community.
-        </p>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center p-6 mt-12">
-        <p>&copy; 2026 Glass Padel UK. All rights reserved.</p>
-    </footer>
+  <footer class="border-t border-slate-800 bg-slate-950/80">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm text-slate-400">
+      <p>&copy; 2026 Glass Padel UK. All rights reserved.</p>
+      <p>Unit 1, Stalybridge Industrial Park, 7 Stanley St, Stalybridge SK15 1SS</p>
+    </div>
+  </footer>
 </body>
 </html>
