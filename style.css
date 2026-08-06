@@ -1,0 +1,59 @@
+/* Shared modern glassmorphism styling for Glass Padel */
+:root {
+  --glass-bg: rgba(15, 23, 42, 0.65);
+  --glass-border: rgba(148, 163, 184, 0.45);
+  --glass-shadow: 0 18px 40px rgba(15, 23, 42, 0.55);
+}
+
+body {
+  background: radial-gradient(circle at top left, #0f172a 0, #020617 35%, #111827 100%);
+}
+
+.glass-nav {
+  backdrop-filter: blur(18px);
+  background: linear-gradient(135deg, rgba(15,23,42,0.92), rgba(30,64,175,0.55));
+  border-bottom: 1px solid rgba(148,163,184,0.45);
+}
+
+.glass-card {
+  backdrop-filter: blur(24px);
+  background: radial-gradient(
+    circle at top left,
+    rgba(15,23,42,0.95),
+    rgba(15,23,42,0.75)
+  );
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.hero-overlay {
+  position: relative;
+}
+
+.hero-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(59,130,246,0.25), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(16,185,129,0.22), transparent 55%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.hero-grid {
+  background:
+    radial-gradient(circle at top left, rgba(59,130,246,0.18), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(56,189,248,0.15), transparent 60%);
+}
+
+.glass-input {
+  backdrop-filter: blur(16px);
+  background: rgba(15,23,42,0.85);
+  border: 1px solid rgba(148,163,184,0.5);
+}
+
+.glass-input:focus {
+  border-color: rgba(59,130,246,0.85);
+  box-shadow: 0 0 0 1px rgba(59,130,246,0.6);
+}
