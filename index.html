@@ -1,44 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glass Padel UK | Stalybridge</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glass Padel UK | Stalybridge</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-blue-600">Glass Padel UK</a>
-            <ul class="flex space-x-6 text-sm md:text-base font-semibold">
-                <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
-                <li><a href="about.html" class="hover:text-blue-500">About</a></li>
-                <li><a href="facilities.html" class="hover:text-blue-500">Facilities</a></li>
-                <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
-                <li><a href="book.html" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700">Book Now</a></li>
-            </ul>
-        </div>
-    </nav>
+<body class="min-h-screen text-slate-100">
+  <!-- Navbar -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 border-b border-slate-700/60">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2">
+        <!-- Simple glass icon mark -->
+        <span class="inline-flex h-9 w-9 rounded-xl bg-slate-900/70 border border-sky-400/50 shadow-lg shadow-sky-900/40 items-center justify-center">
+          <span class="h-6 w-6 rounded-full border border-sky-400/70 bg-slate-950/70 shadow-inner"></span>
+        </span>
+        <span class="text-lg md:text-xl font-semibold tracking-wide">Glass Padel UK</span>
+      </a>
+      <ul class="hidden md:flex space-x-6 text-sm md:text-base font-medium text-slate-100">
+        <li><a href="index.html" class="hover:text-sky-300 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-sky-300 transition">About</a></li>
+        <li><a href="facilities.html" class="hover:text-sky-300 transition">Facilities</a></li>
+        <li><a href="contact.html" class="hover:text-sky-300 transition">Contact</a></li>
+        <li><a href="book.html" class="inline-flex items-center rounded-full bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold px-5 py-2 shadow-md shadow-sky-900/40 transition">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <header class="hero-section h-screen flex items-center justify-center text-white text-center">
-        <div class="p-6 md:p-12">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4">Welcome to Glass Padel</h1>
-            <p class="text-xl md:text-2xl mb-8">Premium indoor padel courts in Stalybridge.</p>
-            <a href="book.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition duration-300">Book a Court</a>
-        </div>
-    </header>
+  <!-- Hero -->
+  <header class="hero-bg hero-overlay relative flex items-center justify-center min-h-screen pt-20">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-slate-900/70"></div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center p-6 mt-12">
-        <p>&copy; 2026 Glass Padel UK. All rights reserved.</p>
-        <p class="text-sm mt-2">Unit 1, Stalybridge Industrial Park, 7 Stanley St, Stalybridge SK15 1SS</p>
-    </footer>
+    <div class="relative max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-center hero-grid">
+        <!-- Left: main messaging -->
+        <div class="glass-card rounded-3xl p-8 md:p-10">
+          <p class="text-xs uppercase tracking-[0.2em] text-sky-300/80 mb-4">
+            Premium indoor padel in Stalybridge
+          </p>
+          <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+            Play padel on true <span class="text-sky-400">glass courts</span>.
+          </h1>
+          <p class="text-sm md:text-base text-slate-300/90 mb-6">
+            Modern, climate-controlled indoor courts with a welcoming community vibe.
+            Perfect for first-time players, regulars, and competitive matches.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 mb-6">
+            <a href="book.html" class="inline-flex items-center rounded-full bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold px-6 py-2.5 shadow-lg shadow-sky-900/40 transition">
+              Book a court
+            </a>
+            <a href="about.html" class="inline-flex items-center rounded-full border border-slate-500/70 bg-slate-900/60 hover:bg-slate-800/70 px-5 py-2.5 text-sm font-medium text-slate-100 transition">
+              Learn more
+            </a>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-6 text-xs md:text-sm text-slate-300/80">
+            <div class="flex items-center gap-2">
+              <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/20 border border-emerald-400/70">
+                <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+              </span>
+              <span>4.9 / 5 on Google • 5 / 5 on Facebook</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-sky-500/20 border border-sky-400/70">
+                <span class="h-3 w-3 rounded-full bg-sky-400"></span>
+              </span>
+              <span>Open daily • courts until midnight</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: location + reviews -->
+        <div class="space-y-4">
+          <div class="glass-card rounded-3xl p-6 md:p-7 flex flex-col gap-4">
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Location</p>
+                <p class="text-sm md:text-base font-medium text-slate-100">
+                  Unit 1, Stalybridge Industrial Park
+                </p>
+                <p class="text-xs md:text-sm text-slate-400">
+                  7 Stanley St, Stalybridge SK15 1SS
+                </p>
+              </div>
+              <a
+                href="https://maps.app.goo.gl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hidden md:inline-flex items-center rounded-full border border-sky-400/70 px-4 py-2 text-xs font-medium text-sky-300 hover:bg-slate-900/70 transition"
+              >
+                Get directions
+              </a>
+            </div>
+            <div class="grid grid-cols-2 gap-3 text-xs md:text-sm">
+              <div class="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-4 flex flex-col gap-1">
+                <p class="text-slate-400">Weekdays</p>
+                <p class="font-semibold">Open • until 12am</p>
+              </div>
+              <div class="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-4 flex flex-col gap-1">
+                <p class="text-slate-400">Weekends</p>
+                <p class="font-semibold">Perfect for social matches</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card rounded-3xl p-6 md:p-7 text-xs md:text-sm flex flex-col gap-3">
+            <p class="text-slate-300/90 font-medium">
+              "Great courts, friendly staff — this will be our new local padel club."
+            </p>
+            <p class="text-slate-400">— Local player on Google Reviews</p>
+            <p class="text-slate-300/90 font-medium">
+              "Overall a brilliant facility which is only going to get better."
+            </p>
+            <p class="text-slate-400">— Visiting player</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950/80">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm text-slate-400">
+      <p>&copy; 2026 Glass Padel UK. All rights reserved.</p>
+      <p>Unit 1, Stalybridge Industrial Park, 7 Stanley St, Stalybridge SK15 1SS</p>
+    </div>
+  </footer>
 </body>
 </html>
