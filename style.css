@@ -1,59 +1,199 @@
-/* Shared modern glassmorphism styling for Glass Padel */
+/* Glass Padel – frosted glass / glassmorphism design system */
+
 :root {
-  --glass-bg: rgba(15, 23, 42, 0.65);
-  --glass-border: rgba(148, 163, 184, 0.45);
-  --glass-shadow: 0 18px 40px rgba(15, 23, 42, 0.55);
+  --gp-bg: #020617;
+  --gp-surface: rgba(226, 232, 240, 0.06);
+  --gp-surface-strong: rgba(226, 232, 240, 0.14);
+  --gp-border: rgba(148, 163, 184, 0.45);
+  --gp-highlight: rgba(56, 189, 248, 0.35);
+  --gp-text: #e5f0ff;
+  --gp-muted: #9ca3af;
+  --gp-accent: #38bdf8; /* sky-400 */
+  --gp-accent-soft: rgba(56, 189, 248, 0.12);
+  --gp-ball-core: #22c55e; /* emerald-500 */
+  --gp-ball-ring: #a5f3fc; /* cyan-200 */
+  --gp-radius-xl: 1.75rem;
+  --gp-radius-lg: 1.25rem;
+  --gp-radius-md: 0.85rem;
+  --gp-radius-full: 9999px;
+  --gp-shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.72);
+  --gp-transition-fast: 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 body {
-  background: radial-gradient(circle at top left, #0f172a 0, #020617 35%, #111827 100%);
+  background:
+    radial-gradient(circle at top left, rgba(148, 163, 184, 0.18) 0, transparent 55%),
+    radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.16) 0, transparent 60%),
+    linear-gradient(to bottom, #020617 0, #020617 40%, #020617 100%);
+}
+
+/* Glass panels */
+.glass-shell {
+  backdrop-filter: blur(26px);
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9));
+}
+
+.glass-panel {
+  backdrop-filter: blur(24px);
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.93), rgba(15, 23, 42, 0.88));
+  border-radius: var(--gp-radius-xl);
+  border: 1px solid var(--gp-border);
+  box-shadow: var(--gp-shadow-soft);
+}
+
+.glass-panel-soft {
+  backdrop-filter: blur(20px);
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.84));
+  border-radius: var(--gp-radius-lg);
+  border: 1px solid rgba(148, 163, 184, 0.3);
 }
 
 .glass-nav {
-  backdrop-filter: blur(18px);
-  background: linear-gradient(135deg, rgba(15,23,42,0.92), rgba(30,64,175,0.55));
-  border-bottom: 1px solid rgba(148,163,184,0.45);
-}
-
-.glass-card {
   backdrop-filter: blur(24px);
-  background: radial-gradient(
-    circle at top left,
-    rgba(15,23,42,0.95),
-    rgba(15,23,42,0.75)
-  );
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
+  background:
+    linear-gradient(135deg, rgba(15,23,42,0.96), rgba(15,23,42,0.9));
+  border-bottom: 1px solid rgba(148,163,184,0.4);
 }
 
-.hero-overlay {
+/* Padel ball motif */
+.padel-ball-mark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 30% 20%, #f9fafb 0, #22c55e 35%, #16a34a 100%);
+  box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.6), 0 14px 30px rgba(22, 163, 74, 0.45);
+}
+
+.padel-ball-mark::before,
+.padel-ball-mark::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  border: 2px solid rgba(250, 250, 250, 0.8);
+}
+
+.padel-ball-mark::before {
+  inset: 18% 6%;
+  border-color: rgba(250, 250, 250, 0.85);
+}
+
+.padel-ball-mark::after {
+  inset: 6% 18%;
+  border-color: rgba(209, 250, 229, 0.9);
+}
+
+.padel-ball-orbit {
   position: relative;
 }
 
-.hero-overlay::before {
+.padel-ball-orbit::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -40%;
+  border-radius: 9999px;
+  border: 1px dashed rgba(148,163,184,0.35);
+}
+
+/* Hero aura */
+.hero-aura {
+  position: relative;
+}
+
+.hero-aura::before {
+  content: "";
+  position: absolute;
+  inset: -35%;
   background:
-    radial-gradient(circle at top left, rgba(59,130,246,0.25), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(16,185,129,0.22), transparent 55%);
+    radial-gradient(circle at top left, rgba(148, 163, 184, 0.28) 0, transparent 55%),
+    radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.32) 0, transparent 60%);
+  opacity: 0.9;
   mix-blend-mode: screen;
   pointer-events: none;
 }
 
-.hero-grid {
+/* Micro animations */
+@keyframes gp-float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes gp-glow {
+  0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.3); }
+  70% { box-shadow: 0 0 0 16px rgba(56, 189, 248, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+}
+
+.padel-ball-animated {
+  animation: gp-float 4s ease-in-out infinite;
+}
+
+.cta-pulse {
+  position: relative;
+}
+
+.cta-pulse::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  animation: gp-glow 2.6s ease-out infinite;
+}
+
+/* Links & buttons */
+.gp-link {
+  transition: color var(--gp-transition-fast), opacity var(--gp-transition-fast);
+}
+
+.gp-link:hover {
+  color: var(--gp-accent);
+}
+
+.gp-primary {
+  transition:
+    background var(--gp-transition-fast),
+    box-shadow var(--gp-transition-fast),
+    transform var(--gp-transition-fast);
+}
+
+.gp-primary:hover {
+  background: #38bdf8;
+  box-shadow: 0 18px 45px rgba(56, 189, 248, 0.45);
+  transform: translateY(-1px);
+}
+
+.gp-secondary {
+  transition:
+    background var(--gp-transition-fast),
+    border-color var(--gp-transition-fast),
+    transform var(--gp-transition-fast);
+}
+
+.gp-secondary:hover {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: rgba(148, 163, 184, 0.8);
+  transform: translateY(-1px);
+}
+
+/* Sections */
+.section-shell {
+  border-radius: var(--gp-radius-xl);
+  border: 1px solid rgba(148, 163, 184, 0.35);
   background:
-    radial-gradient(circle at top left, rgba(59,130,246,0.18), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(56,189,248,0.15), transparent 60%);
+    linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
 }
 
-.glass-input {
-  backdrop-filter: blur(16px);
-  background: rgba(15,23,42,0.85);
-  border: 1px solid rgba(148,163,184,0.5);
-}
-
-.glass-input:focus {
-  border-color: rgba(59,130,246,0.85);
-  box-shadow: 0 0 0 1px rgba(59,130,246,0.6);
+.section-shell-soft {
+  border-radius: var(--gp-radius-lg);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background:
+    linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.86));
 }
