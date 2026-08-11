@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- same <head> and <header> as template above -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glass Padel UK</title>
+  <title>Glass Padel</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="min-h-screen bg-slate-950 text-slate-100">
-  <!-- header copied from template -->
-  <header class="border-b border-slate-800/70 bg-slate-950/80 backdrop-blur-xl sticky top-0 z-40">
+  <!-- header as above -->
+  <header class="glass-nav sticky top-0 z-40 border-b border-slate-800/70">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <svg aria-label="Glass Padel logo" viewBox="0 0 48 48" class="h-9 w-9 text-sky-400">
-          <rect x="6" y="6" width="36" height="36" rx="9" fill="none" stroke="currentColor" stroke-width="2" opacity="0.75" />
-          <circle cx="24" cy="24" r="11" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.85" />
-        </svg>
+        <div class="padel-ball-orbit padel-ball-animated">
+          <div class="padel-ball-mark"></div>
+        </div>
         <div class="flex flex-col">
-          <span class="text-sm font-semibold tracking-[0.16em] uppercase text-slate-400">Stalybridge</span>
-          <span class="text-lg font-semibold tracking-tight">Glass Padel UK</span>
+          <span class="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400">Stalybridge</span>
+          <span class="text-lg md:text-xl font-semibold tracking-tight">Glass Padel</span>
         </div>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="index.html" class="hover:text-sky-300 transition">Overview</a>
-        <a href="about.html" class="hover:text-sky-300 transition">Club</a>
-        <a href="facilities.html" class="hover:text-sky-300 transition">Courts</a>
-        <a href="contact.html" class="hover:text-sky-300 transition">Visit</a>
-        <a href="book.html" class="inline-flex items-center rounded-full bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold px-5 py-2 shadow-md shadow-sky-900/40 transition">Book a court</a>
+        <a href="index.html" class="gp-link">Overview</a>
+        <a href="about.html" class="gp-link">Club</a>
+        <a href="facilities.html" class="gp-link">Courts</a>
+        <a href="contact.html" class="gp-link">Visit</a>
+        <a href="book.html" class="inline-flex items-center rounded-full bg-sky-500 text-slate-900 font-semibold px-5 py-2 gp-primary cta-pulse">Book a court</a>
       </nav>
     </div>
   </header>
 
   <main class="pt-20 pb-16">
     <section class="max-w-6xl mx-auto px-4">
-      <div class="glass-card rounded-3xl p-8 md:p-10">
+      <div class="glass-panel p-8 md:p-10">
         <h1 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">About the club</h1>
         <p class="text-sm md:text-base text-slate-300/90 mb-4">
-          Glass Padel is a modern padel facility based in Stalybridge, offering high-quality indoor glass courts
-          for players of all abilities. We focus on a welcoming, social environment where friends, families and
-          local players can stay active, have fun and be part of a growing padel community.
+          Glass Padel is a modern indoor padel company built around premium glass courts, a social community and a
+          high-end playing experience. We welcome first-time players, regulars and competitive teams, all under one
+          frosted-glass roof.
         </p>
       </div>
     </section>
@@ -47,7 +45,7 @@
 
   <footer class="border-t border-slate-800 bg-slate-950/90">
     <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm text-slate-400">
-      <p>&copy; 2026 Glass Padel UK. All rights reserved.</p>
+      <p>&copy; 2026 Glass Padel. All rights reserved.</p>
       <p>Unit 1, Stalybridge Industrial Park, 7 Stanley St, Stalybridge SK15 1SS</p>
     </div>
   </footer>
