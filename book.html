@@ -3,42 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glass Padel UK</title>
+  <title>Glass Padel</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen text-slate-100">
-  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 border-b border-slate-700/60">
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <header class="glass-nav sticky top-0 z-40 border-b border-slate-800/70">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="index.html" class="flex items-center space-x-2">
-        <span class="inline-flex h-9 w-9 rounded-xl bg-slate-900/70 border border-sky-400/50 shadow-lg shadow-sky-900/40 items-center justify-center">
-          <span class="h-6 w-6 rounded-full border border-sky-400/70 bg-slate-950/70 shadow-inner"></span>
-        </span>
-        <span class="text-lg md:text-xl font-semibold tracking-wide">Glass Padel UK</span>
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="padel-ball-orbit padel-ball-animated">
+          <div class="padel-ball-mark"></div>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400">Stalybridge</span>
+          <span class="text-lg md:text-xl font-semibold tracking-tight">Glass Padel</span>
+        </div>
       </a>
-      <ul class="hidden md:flex space-x-6 text-sm md:text-base font-medium text-slate-100">
-        <li><a href="index.html" class="hover:text-sky-300 transition">Home</a></li>
-        <li><a href="about.html" class="hover:text-sky-300 transition">About</a></li>
-        <li><a href="facilities.html" class="hover:text-sky-300 transition">Facilities</a></li>
-        <li><a href="contact.html" class="hover:text-sky-300 transition">Contact</a></li>
-        <li><a href="book.html" class="inline-flex items-center rounded-full bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold px-5 py-2 shadow-md shadow-sky-900/40 transition">Book Now</a></li>
-      </ul>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="gp-link">Overview</a>
+        <a href="about.html" class="gp-link">Club</a>
+        <a href="facilities.html" class="gp-link">Courts</a>
+        <a href="contact.html" class="gp-link">Visit</a>
+        <a href="book.html" class="inline-flex items-center rounded-full bg-sky-500 text-slate-900 font-semibold px-5 py-2 gp-primary cta-pulse">Book a court</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main class="pt-24 pb-16">
+  <main class="pt-20 pb-16">
     <section class="max-w-6xl mx-auto px-4">
-      <div class="glass-card rounded-3xl p-8 md:p-10">
-        <h1 class="text-2xl md:text-3xl font-bold tracking-tight mb-4">Book Your Court</h1>
+      <div class="glass-panel p-8 md:p-10">
+        <h1 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">Book a glass court</h1>
         <p class="text-sm md:text-base text-slate-300/90 mb-6">
-          Secure your spot on our glass courts via Playtomic. Choose from casual games, social sessions,
-          and more competitive match play, all managed through our online booking system.
+          Reserve your glass court online via Playtomic. Choose from casual sessions, social match play and more competitive
+          fixtures, then confirm your booking instantly from your phone.
         </p>
         <a
           href="https://playtomic.io/tenant/5e91a282-8cd0-4b61-b1e8-f7187e396a74"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center rounded-full bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold px-6 py-2.5 shadow-lg shadow-sky-900/40 transition"
+          class="inline-flex items-center rounded-full bg-sky-500 text-slate-900 font-semibold px-6 py-2.5 gp-primary cta-pulse"
         >
           Book on Playtomic
         </a>
@@ -46,9 +49,9 @@
     </section>
   </main>
 
-  <footer class="border-t border-slate-800 bg-slate-950/80">
+  <footer class="border-t border-slate-800 bg-slate-950/90">
     <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm text-slate-400">
-      <p>&copy; 2026 Glass Padel UK. All rights reserved.</p>
+      <p>&copy; 2026 Glass Padel. All rights reserved.</p>
       <p>Unit 1, Stalybridge Industrial Park, 7 Stanley St, Stalybridge SK15 1SS</p>
     </div>
   </footer>
