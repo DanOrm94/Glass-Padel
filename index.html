@@ -3,84 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glass Padel UK | Indoor Padel Club</title>
+  <title>Glass Padel | Indoor Padel Club</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .hero-shell {
-      background: radial-gradient(circle at top left, #1f2937 0, #020617 40%, #0b1120 100%);
-    }
-  </style>
 </head>
 <body class="min-h-screen bg-slate-950 text-slate-100">
-  <!-- Top shell -->
-  <div class="hero-shell min-h-screen flex flex-col">
-    <!-- Nav -->
-    <header class="border-b border-slate-800/70 bg-slate-950/80 backdrop-blur-xl sticky top-0 z-40">
+  <!-- Top glass shell -->
+  <div class="glass-shell min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <header class="glass-nav sticky top-0 z-40 border-b border-slate-800/70">
       <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-3">
-          <svg aria-label="Glass Padel logo" viewBox="0 0 48 48" class="h-9 w-9 text-sky-400">
-            <defs>
-              <linearGradient id="gp-glass" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="rgba(56,189,248,0.2)" />
-                <stop offset="100%" stop-color="rgba(56,189,248,0.8)" />
-              </linearGradient>
-            </defs>
-            <rect x="6" y="6" width="36" height="36" rx="9" fill="none" stroke="url(#gp-glass)" stroke-width="2" />
-            <circle cx="24" cy="24" r="11" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.85" />
-            <circle cx="24" cy="20" r="2.3" fill="currentColor" />
-            <path d="M18 28c2.5-2 9.5-2 12 0" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.85" />
-          </svg>
+          <div class="padel-ball-orbit padel-ball-animated">
+            <div class="padel-ball-mark"></div>
+          </div>
           <div class="flex flex-col">
-            <span class="text-sm font-semibold tracking-[0.16em] uppercase text-slate-400">Stalybridge</span>
-            <span class="text-lg font-semibold tracking-tight">Glass Padel UK</span>
+            <span class="text-xs font-semibold tracking-[0.24em] uppercase text-slate-400">Stalybridge</span>
+            <span class="text-lg md:text-xl font-semibold tracking-tight">Glass Padel</span>
           </div>
         </a>
         <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-          <a href="index.html" class="hover:text-sky-300 transition">Overview</a>
-          <a href="about.html" class="hover:text-sky-300 transition">Club</a>
-          <a href="facilities.html" class="hover:text-sky-300 transition">Courts</a>
-          <a href="contact.html" class="hover:text-sky-300 transition">Visit</a>
-          <a href="book.html" class="inline-flex items-center rounded-full bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold px-5 py-2 shadow-md shadow-sky-900/40 transition">Book a court</a>
+          <a href="index.html" class="gp-link">Overview</a>
+          <a href="about.html" class="gp-link">Club</a>
+          <a href="facilities.html" class="gp-link">Courts</a>
+          <a href="contact.html" class="gp-link">Visit</a>
+          <a href="book.html" class="inline-flex items-center rounded-full bg-sky-500 text-slate-900 font-semibold px-5 py-2 gp-primary cta-pulse">Book a court</a>
         </nav>
       </div>
     </header>
 
-    <!-- Hero & quick info -->
+    <!-- Hero -->
     <main class="flex-1">
       <section class="max-w-6xl mx-auto px-4 pt-10 pb-16">
-        <div class="grid lg:grid-cols-[1.3fr,1fr] gap-10 items-start">
-          <!-- Left: hero copy -->
-          <article class="glass-card rounded-3xl p-8 md:p-10">
-            <p class="text-xs uppercase tracking-[0.28em] text-sky-300/80 mb-4">Indoor padel, glass courts, late opening</p>
+        <div class="grid lg:grid-cols-[1.4fr,1fr] gap-10 items-start">
+          <!-- Hero content -->
+          <article class="glass-panel hero-aura p-8 md:p-10">
+            <p class="text-xs uppercase tracking-[0.28em] text-slate-400 mb-4">Indoor padel • glass courts • late opening</p>
             <h1 class="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
-              Play padel in a <span class="text-sky-400">modern glass club</span> in the heart of Stalybridge.
+              Premium <span class="text-sky-400">glass padel</span> for players who love fast rallies and clean design.
             </h1>
-            <p class="text-sm md:text-base text-slate-300/90 mb-6">
-              Glass Padel UK is a dedicated indoor padel club with premium glass courts, a relaxed social atmosphere,
-              and easy online booking. Whether it is your first time on court or your weekly league match, the
-              experience is sharp, fast and fun.
+            <p class="text-sm md:text-base text-slate-300/90 mb-6 max-w-xl">
+              Glass Padel is a modern indoor padel club built around frosted glass courts, subtle lighting and a high-end
+              atmosphere. From your first coaching session to league nights with friends, the experience feels sharp,
+              sporty and effortless.
             </p>
             <div class="flex flex-wrap items-center gap-4 mb-8">
-              <a href="book.html" class="inline-flex items-center rounded-full bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold px-6 py-2.5 shadow-lg shadow-sky-900/40 transition">
-                Book a court
+              <a href="book.html" class="inline-flex items-center rounded-full bg-sky-500 text-slate-900 font-semibold px-6 py-2.5 gp-primary cta-pulse">
+                Book a court now
               </a>
-              <a href="about.html" class="inline-flex items-center rounded-full border border-slate-500/70 bg-slate-900/60 hover:bg-slate-800/70 px-5 py-2.5 text-sm font-medium text-slate-100 transition">
-                How the club works
+              <a href="about.html" class="inline-flex items-center rounded-full border border-slate-500/70 bg-slate-900/70 px-5 py-2.5 text-sm font-medium gp-secondary">
+                Explore the club
               </a>
             </div>
             <div class="grid sm:grid-cols-3 gap-4 text-xs md:text-sm">
-              <div class="rounded-2xl border border-slate-700/70 bg-slate-900/70 p-4 flex flex-col gap-1">
+              <div class="section-shell-soft p-4 flex flex-col gap-1">
                 <p class="text-slate-400">Opening hours</p>
                 <p class="font-semibold">Courts available until 12am</p>
-                <p class="text-slate-500">Ideal for after-work and late-night matches.</p>
+                <p class="text-slate-500">Perfect for after-work and late-night matches.</p>
               </div>
-              <div class="rounded-2xl border border-slate-700/70 bg-slate-900/70 p-4 flex flex-col gap-1">
+              <div class="section-shell-soft p-4 flex flex-col gap-1">
                 <p class="text-slate-400">Location</p>
                 <p class="font-semibold">Unit 1, Stalybridge Industrial Park</p>
                 <p class="text-slate-500">7 Stanley St, Stalybridge SK15 1SS.</p>
               </div>
-              <div class="rounded-2xl border border-slate-700/70 bg-slate-900/70 p-4 flex flex-col gap-1">
+              <div class="section-shell-soft p-4 flex flex-col gap-1">
                 <p class="text-slate-400">Community ratings</p>
                 <p class="font-semibold">4.9 / 5 on Google</p>
                 <p class="text-slate-500">5 / 5 on Facebook from local players.</p>
@@ -88,29 +74,25 @@
             </div>
           </article>
 
-          <!-- Right: snapshot cards -->
+          <!-- Ball motif + quick facts -->
           <aside class="space-y-4">
-            <div class="glass-card rounded-3xl p-6 md:p-7 flex flex-col gap-4">
-              <div class="flex items-center justify-between gap-3">
+            <div class="glass-panel-soft p-6 md:p-7 flex flex-col gap-4">
+              <div class="flex items-center gap-3">
+                <div class="padel-ball-orbit padel-ball-animated">
+                  <div class="padel-ball-mark"></div>
+                </div>
                 <div>
-                  <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Find us</p>
-                  <p class="text-sm md:text-base font-medium text-slate-100">Stalybridge, Greater Manchester</p>
-                  <p class="text-xs md:text-sm text-slate-400">Easy access from Manchester and surrounding areas.</p>
+                  <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Glass padel, defined</p>
+                  <p class="text-sm md:text-base font-medium text-slate-100">True glass courts, indoor and climate-controlled.</p>
                 </div>
               </div>
-              <div class="grid grid-cols-2 gap-3 text-xs md:text-sm">
-                <div class="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-4 flex flex-col gap-1">
-                  <p class="text-slate-400">Email</p>
-                  <p class="font-semibold">info@glasspadelclub.co.uk</p>
-                </div>
-                <div class="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-4 flex flex-col gap-1">
-                  <p class="text-slate-400">Phone</p>
-                  <p class="font-semibold">07904 751051</p>
-                </div>
-              </div>
+              <p class="text-xs md:text-sm text-slate-300/90">
+                Play on courts that look and feel premium: frosted glass walls, crisp white lines, cool blue lighting and
+                a consistent bounce on every rally.
+              </p>
             </div>
 
-            <div class="glass-card rounded-3xl p-6 md:p-7 text-xs md:text-sm flex flex-col gap-3">
+            <div class="glass-panel-soft p-6 md:p-7 text-xs md:text-sm flex flex-col gap-3">
               <p class="text-slate-300/90 font-medium">
                 "Great courts, friendly staff — this will be our new local padel club."
               </p>
@@ -126,10 +108,10 @@
     </main>
   </div>
 
-  <!-- Footer band -->
+  <!-- Footer -->
   <footer class="border-t border-slate-800 bg-slate-950/90">
     <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm text-slate-400">
-      <p>&copy; 2026 Glass Padel UK. All rights reserved.</p>
+      <p>&copy; 2026 Glass Padel. All rights reserved.</p>
       <p>Unit 1, Stalybridge Industrial Park, 7 Stanley St, Stalybridge SK15 1SS</p>
     </div>
   </footer>
