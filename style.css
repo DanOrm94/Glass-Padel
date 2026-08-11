@@ -197,3 +197,17 @@ body {
   background:
     linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.86));
 }
+/* Make all text white by default */
+body {
+  color: #ffffff;
+}
+
+/* Ensure headings and paragraphs inside glass panels are white */
+.glass-panel h1,
+.glass-panel h2,
+.glass-panel p,
+.glass-panel-soft h1,
+.glass-panel-soft h2,
+.glass-panel-soft p {
+  color: #ffffff;
+}
